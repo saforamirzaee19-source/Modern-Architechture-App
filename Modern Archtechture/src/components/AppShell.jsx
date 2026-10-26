@@ -15,6 +15,8 @@ const NAV_ITEMS = [
   { to: "/materials", icon: "box", label: "Materials" },
   { to: "/contractors", icon: "hardhat", label: "Contractors" },
   { to: "/my-projects", icon: "folder", label: "My Projects" },
+  { to: "/document", icon: "card", label: "Documents" },
+  { to: "/timeline", icon: "calendar", label: "Timeline" },
   { to: "/billing", icon: "card", label: "Billing" },
   { to: "/settings", icon: "sliders", label: "Settings" },
 ];

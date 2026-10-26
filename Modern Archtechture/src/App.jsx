@@ -12,6 +12,8 @@ import Contractors from "./pages/Contractors.jsx";
 import NewProject from "./pages/NewProject.jsx";
 import Billing from "./pages/Billing.jsx";
 import Settings from "./pages/Settings.jsx";
+import Documents from "./pages/Documents.jsx";
+import Timeline from "./pages/TimeLIne.jsx";
 
 export default function App() {
   return (
@@ -29,7 +31,9 @@ export default function App() {
         <Route path="/contractors" element={<Contractors />} />
         <Route path="/my-projects" element={<NewProject />} />
         <Route path="/billing" element={<Billing />} />
+        <Route path="/document" element={<Documents />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/timeline" element={<Timeline />} />
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
     </>

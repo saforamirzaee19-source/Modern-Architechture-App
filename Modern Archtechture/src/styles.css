@@ -10,6 +10,11 @@
   --radius: 16px;
   --sidebar-w: 260px;
   --sidebar-w-collapsed: 78px;
+  --tw-ink: 34 34 34;
+  --tw-muted: 111 106 98;
+  --tw-line: 231 223 210;
+  --tw-surface: 255 255 255;
+  --tw-surface-2: 250 247 242;
 }
 body, body.light-theme {
   --bg: #f5f1eb;
@@ -24,6 +29,11 @@ body, body.light-theme {
   --input-bg: #ffffff;
 }
 body.dark-theme {
+  --tw-ink: 243 237 227;
+  --tw-muted: 168 159 144;
+  --tw-line: 58 52 44;
+  --tw-surface: 29 26 22;
+  --tw-surface-2: 38 34 29;
   --bg: #12100e;
   --surface: #1d1a16;
   --surface-2: #26221d;
@@ -717,4 +727,11 @@ body.dark-theme *::-webkit-scrollbar-thumb {
 html:has(body.dark-theme)::-webkit-scrollbar-thumb:hover,
 body.dark-theme *::-webkit-scrollbar-thumb:hover {
   background: #ecc87a;
+}
+
+@tailwind utilities;
+
+:where(.tw-page button) {
+  color: inherit;
+  background-color: transparent;
 }
