@@ -54,14 +54,7 @@ export default function Signup() {
           </button>
         </div>
         <div className="login-hero-copy">
-          <p className="eyebrow light">Start your project</p>
-          <h1>
-            Join {BRAND.name} {BRAND.sub}
-          </h1>
-          <p>
-            Ready to transform your space? Create your workspace and bring your
-            vision to life together.
-          </p>
+          <p className="eyebrow light"></p>
         </div>
       </header>
 

@@ -57,7 +57,7 @@ function DonutCard({
           {labels.map((l, i) => (
             <div className="promotion-legend-item" key={l}>
               <span className="promotion-name">
-                <i style={{ background: COLORS[i] }} />
+                <i style={{ background: COLORS[i] }} className={COLORS[i] === "#222222" ? "swatch-ink" : ""} />
                 {l}
               </span>
               <strong>

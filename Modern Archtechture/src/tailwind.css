@@ -1,0 +1,20 @@
+/* Tailwind for the Timeline and Documents pages (wrapped in .tw-page).
+   Preflight is OFF, so this small base keeps borders/buttons/inputs sane. */
+:where(.tw-page) *, :where(.tw-page) ::before, :where(.tw-page) ::after { border-width: 0; border-style: solid; border-color: rgb(var(--tw-line)); }
+:where(.tw-page) button { background: transparent; padding: 0; color: inherit; font: inherit; border-width: 0; }
+:where(.tw-page) input:not([type="file"]), :where(.tw-page) select, :where(.tw-page) textarea { box-sizing: border-box; width: 100%; min-width: 0; min-height: 42px; padding: 10px 14px; border: 1px solid rgb(var(--tw-line)); border-radius: 10px; background: rgb(var(--tw-surface)); color: rgb(var(--tw-ink)); box-shadow: none; font: inherit; }
+:where(.tw-page) input::placeholder, :where(.tw-page) textarea::placeholder { color: rgb(var(--tw-muted)); opacity: 1; }
+:where(.tw-page) input:focus, :where(.tw-page) select:focus, :where(.tw-page) textarea:focus { border-color: var(--gold); outline: none; box-shadow: 0 0 0 3px rgba(212, 164, 75, 0.2); }
+:where(.tw-page) input[type="checkbox"], :where(.tw-page) input[type="radio"] { width: 16px; min-height: 16px; height: 16px; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: var(--gold); }
+:where(.tw-page) input[type="file"] { max-width: 100%; }
+:where(.tw-page) button { cursor: pointer; }
+:where(.tw-page) ul, :where(.tw-page) ol { list-style: none; margin: 0; padding: 0; }
+:where(.tw-page) h1, :where(.tw-page) h2, :where(.tw-page) h3, :where(.tw-page) h4, :where(.tw-page) p { margin: 0; }
+
+@tailwind base;       /* only defines Tailwind variables (preflight is off) */
+@tailwind components;
+@tailwind utilities;
+
+/* Custom helpers used by the two pages */
+.gantt-grid { background-image: repeating-linear-gradient(to right, var(--line) 0, var(--line) 1px, transparent 1px, transparent var(--week, 42px)); }
+.blueprint { background-color: #14110d; background-image: linear-gradient(rgba(212,164,75,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(212,164,75,.14) 1px, transparent 1px), linear-gradient(rgba(212,164,75,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(212,164,75,.06) 1px, transparent 1px); background-size: 40px 40px, 40px 40px, 8px 8px, 8px 8px; }

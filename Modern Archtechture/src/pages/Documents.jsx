@@ -75,7 +75,7 @@ const SEED = [
     by: "Laila Noori",
     status: "Approved",
     updated: "Oct 18, 2026",
-    thumb: IMG.modern,
+    thumb: IMG.homeFour,
     versions: [
       v(2, "Oct 18", "Laila Noori", "Lighting pass"),
       v(1, "Oct 11", "Laila Noori", "Base render"),
@@ -162,7 +162,7 @@ const SEED = [
     by: "Bilal Ahmadi",
     status: "Approved",
     updated: "Oct 20, 2026",
-    thumb: IMG.sofa,
+    thumb: IMG.modern,
     versions: [v(1, "Oct 20", "Bilal Ahmadi", "Weekly photo set")],
   },
   {
@@ -187,7 +187,7 @@ const SEED = [
     by: "Laila Noori",
     status: "Draft",
     updated: "Oct 24, 2026",
-    thumb: IMG.wind,
+    thumb: IMG.salon,
     versions: [v(1, "Oct 24", "Laila Noori", "First look")],
   },
   {
@@ -236,7 +236,7 @@ const SEED = [
     by: "Bilal Ahmadi",
     status: "Approved",
     updated: "Oct 17, 2026",
-    thumb: IMG.urban,
+    thumb: IMG.homeTwo,
     versions: [v(1, "Oct 17", "Bilal Ahmadi", "Slab pour day 2")],
   },
 ];

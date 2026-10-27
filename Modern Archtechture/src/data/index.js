@@ -24,6 +24,10 @@ import Sarah from "../assets/images/sarah.jpg";
 import logo from "../assets/images/Luxe.jpeg";
 import homeOne from "../assets/images/home-1.jpg";
 import homeTwo from "../assets/images/home-2.jpg";
+import homeFour from "../assets/images/home-4.jpg";
+import homeSix from "../assets/images/home-6.jpg";
+import salon from "../assets/images/salon.jpg";
+import teamPlans from "../assets/images/sitScatual.png";
 
 export const IMG = {
   heroImg,
@@ -48,6 +52,13 @@ export const IMG = {
   logo,
   Ahamd,
   Bilal,
+  homeOne,
+  homeTwo,
+  homeFour,
+  homeSix,
+  salon,
+  teamPlans,
+  safora: Safora, // lower-case alias used by Settings page
 };
 
 export const BRAND = {
@@ -116,7 +127,7 @@ export const SERVICES = [
   {
     id: "pm",
     title: "Project Management",
-    image: wind,
+    image: teamPlans,
     text: "Comprehensive project oversight ensuring timely delivery, quality control, and seamless execution.",
     search: "project management schedule quality control",
   },
@@ -157,7 +168,7 @@ export const PROJECTS = [
     name: "Modern Villa",
     type: "Residential",
     kind: "Residential Design",
-    image: modern,
+    image: homeFour,
     phase: "execution",
     progress: 68,
     budget: 420000,
@@ -208,7 +219,7 @@ export const PROJECTS = [
     name: "Contemporary Home",
     type: "Residential",
     kind: "Residential Interior",
-    image: sofa,
+    image: homeThree,
     phase: "concept",
     progress: 22,
     budget: 310000,
@@ -225,7 +236,7 @@ export const PROJECTS = [
     name: "Boutique Hotel",
     type: "Hospitality",
     kind: "Hospitality Design",
-    image: wind,
+    image: salon,
     phase: "design",
     progress: 47,
     budget: 960000,
@@ -242,7 +253,7 @@ export const PROJECTS = [
     name: "Urban Complex",
     type: "Mixed-Use",
     kind: "Mixed-Use Architecture",
-    image: oip,
+    image: homeFive,
     phase: "discovery",
     progress: 9,
     budget: 3200000,
@@ -361,21 +372,21 @@ export const TESTIMONIALS = [
 // ---------- Blog (Design Insights) ----------
 export const INSIGHTS = [
   {
-    image: wind,
+    image: homeOne,
     date: "March 15, 2025",
     tag: "Trends",
     title: "Top Design Trends for 2025",
     text: "Discover the emerging trends that are shaping the future of architecture and interior design this year.",
   },
   {
-    image: modern,
+    image: homeFour,
     date: "March 8, 2025",
     tag: "Sustainability",
     title: "Sustainable Design Practices",
     text: "How we integrate eco-friendly materials and energy-efficient solutions into our design philosophy.",
   },
   {
-    image: penthouse,
+    image: modern,
     date: "February 28, 2025",
     tag: "Tips",
     title: "Maximizing Small Spaces",
@@ -393,7 +404,7 @@ export const STUDIO_STATS = [
 export const MATERIALS = [
   {
     id: 1,
-    image: white,
+    image: salon,
     category: "Finishes",
     price: 48,
     supplier: "Kabul Stone & Tile",
@@ -411,7 +422,7 @@ export const MATERIALS = [
   },
   {
     id: 3,
-    image: wind,
+    image: glassHouse,
     category: "Windows",
     price: 85,
     supplier: "Arg Aluminium",
@@ -432,7 +443,7 @@ export const MATERIALS = [
 export const MATERIAL_ROWS = [
   {
     rowKey: 1,
-    image: white,
+    image: salon,
     name: "Porcelain Slab 120×60",
     category: "Finishes",
     serviceLogo: urban,
@@ -454,7 +465,7 @@ export const MATERIAL_ROWS = [
   },
   {
     rowKey: 3,
-    image: wind,
+    image: glassHouse,
     name: "Aluminium Window Set",
     category: "Windows",
     serviceLogo: modern,
@@ -476,7 +487,7 @@ export const MATERIAL_ROWS = [
   },
   {
     rowKey: 5,
-    image: modern,
+    image: homeFour,
     name: "Reinforced Concrete Mix C35",
     category: "Structure",
     serviceLogo: urban,
@@ -487,7 +498,7 @@ export const MATERIAL_ROWS = [
   },
   {
     rowKey: 6,
-    image: penthouse,
+    image: modern,
     name: "Oak Engineered Flooring",
     category: "Finishes",
     serviceLogo: hotel,
@@ -502,7 +513,7 @@ export const MATERIAL_ROWS = [
 export const CONTRACTOR_ITEMS = [
   {
     id: 1,
-    image: urban,
+    image: teamPlans,
     category: "General Contractor",
     price: 350,
     unit: "day",
@@ -512,7 +523,7 @@ export const CONTRACTOR_ITEMS = [
   },
   {
     id: 2,
-    image: modern,
+    image: homeOne,
     category: "Electrical & MEP",
     price: 220,
     unit: "day",
@@ -522,7 +533,7 @@ export const CONTRACTOR_ITEMS = [
   },
   {
     id: 3,
-    image: hotel,
+    image: homeTwo,
     category: "Crane & Equipment",
     price: 480,
     unit: "day",
@@ -532,7 +543,7 @@ export const CONTRACTOR_ITEMS = [
   },
   {
     id: 4,
-    image: penthouse,
+    image: salon,
     category: "Interior Fit-out",
     price: 190,
     unit: "day",
@@ -545,7 +556,7 @@ export const CONTRACTOR_ITEMS = [
 export const CONTRACTOR_ROWS = [
   {
     rowKey: 1,
-    image: urban,
+    image: teamPlans,
     name: "Structural Works Crew",
     category: "Contractor",
     serviceLogo: modern,
@@ -556,7 +567,7 @@ export const CONTRACTOR_ROWS = [
   },
   {
     rowKey: 2,
-    image: modern,
+    image: homeOne,
     name: "MEP Installation Team",
     category: "Contractor",
     serviceLogo: glass,
@@ -567,7 +578,7 @@ export const CONTRACTOR_ROWS = [
   },
   {
     rowKey: 3,
-    image: hotel,
+    image: homeTwo,
     name: "Mobile Crane 50t",
     category: "Equipment",
     serviceLogo: wind,
@@ -578,7 +589,7 @@ export const CONTRACTOR_ROWS = [
   },
   {
     rowKey: 4,
-    image: penthouse,
+    image: salon,
     name: "Interior Fit-out Crew",
     category: "Contractor",
     serviceLogo: sofa,
@@ -589,7 +600,7 @@ export const CONTRACTOR_ROWS = [
   },
   {
     rowKey: 5,
-    image: oip,
+    image: homeThree,
     name: "Scaffolding (per 100 m²)",
     category: "Equipment",
     serviceLogo: urban,
@@ -600,7 +611,7 @@ export const CONTRACTOR_ROWS = [
   },
   {
     rowKey: 6,
-    image: white,
+    image: homeSix,
     name: "Painting & Plaster Crew",
     category: "Contractor",
     serviceLogo: sofa,
