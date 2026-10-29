@@ -369,6 +369,26 @@ export default function Dashboard() {
       <section className="content-block">
         <div className="section-heading">
           <div>
+            <p className="eyebrow">Discover our work</p>
+            <h2>Our simple website</h2>
+            <p className="muted website-link-description">
+              Visit our separate website to explore more of our work.
+            </p>
+          </div>
+          <a
+            className="btn-gold website-link-button"
+            href="https://saforamirzaee19-source.github.io/Modern-Architechture/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Visit website <Icon name="arrow" size={15} />
+          </a>
+        </div>
+      </section>
+
+      <section className="content-block">
+        <div className="section-heading">
+          <div>
             <p className="eyebrow">Client stories</p>
             <h2>What clients say</h2>
           </div>
