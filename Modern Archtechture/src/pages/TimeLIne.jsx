@@ -334,8 +334,8 @@ export default function Timeline() {
 
         {/* ---------- Gantt ---------- */}
         {view === "gantt" && (
-          <section className="overflow-hidden rounded-3xl border border-line bg-surface shadow-luxe">
-            <div className="flex items-center justify-between border-b border-line px-5 py-3">
+        <section className="timeline-gantt overflow-hidden rounded-3xl border border-line bg-surface shadow-luxe">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-3">
               <div className="flex flex-wrap gap-4 text-xs text-mute">
                 {PHASES.map((p) => (
                   <span key={p.key} className="flex items-center gap-2">
@@ -357,7 +357,46 @@ export default function Timeline() {
                 <Icon name="flag" size={13} /> Today
               </button>
             </div>
-            <div ref={scroller} className="overflow-x-auto">
+            <div className="timeline-mobile-list">
+              {grouped.map(({ ph, items }) => (
+                <div className="timeline-mobile-phase" key={ph.key}>
+                  <h3 className={PHASE_STYLE[ph.key].text}>
+                    <i className={PHASE_STYLE[ph.key].dot} />
+                    {ph.label}
+                    <span>{items.length}</span>
+                  </h3>
+                  {items.map((t) => {
+                    const overdue =
+                      t.status !== "done" && t.end < today && !t.milestone;
+                    const statusLabel =
+                      STATUSES.find((s) => s.key === t.status)?.label ?? t.status;
+                    return (
+                      <article className="timeline-mobile-task" key={t.id}>
+                        <div className="timeline-mobile-task__top">
+                          <strong>{t.title}</strong>
+                          {overdue && <span className="timeline-mobile-late">Late</span>}
+                          {t.milestone && <span className="timeline-mobile-milestone">Milestone</span>}
+                        </div>
+                        <div className="timeline-mobile-owner">
+                          <Avatar src={photoOf(t.owner)} name={t.owner} size={26} />
+                          <span>{t.owner}</span>
+                        </div>
+                        <div className="timeline-mobile-dates">
+                          <span>{fmt(t.start)}{t.milestone ? "" : ` – ${fmt(t.end)}`}</span>
+                          <span>{statusLabel}</span>
+                        </div>
+                        {!t.milestone && (
+                          <div className="timeline-mobile-progress" aria-label={`${t.progress}% complete`}>
+                            <i style={{ width: `${t.progress}%` }} />
+                          </div>
+                        )}
+                      </article>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+            <div ref={scroller} className="timeline-gantt__scroller overflow-x-auto">
               <div style={{ width: LABEL_W + chartW }} className="relative">
                 {/* header */}
                 <div className="sticky top-0 z-20 flex border-b border-line bg-surface2">
